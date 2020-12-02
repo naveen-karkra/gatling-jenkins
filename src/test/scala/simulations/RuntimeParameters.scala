@@ -30,7 +30,7 @@ class RuntimeParameters extends Simulation {
     exec(
       http("Get all video games")
         .get("videogames")
-        .check(status.is(200))
+        .check(status.is(400))
     )
   }
 
