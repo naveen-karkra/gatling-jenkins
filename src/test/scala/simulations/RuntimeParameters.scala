@@ -44,7 +44,8 @@ class RuntimeParameters extends Simulation {
       nothingFor(5 seconds),
       rampUsers(userCount) during (rampDuration second)
     )
-  ).protocols(httpConf)
+  ).assertions(global.responseTime.max.lt(100))     //assertions fail the build in jenkins if the SLA mentioned does not match but the checks does not do that
+    .protocols(httpConf)
     .maxDuration(testDuration seconds)
 
 }
