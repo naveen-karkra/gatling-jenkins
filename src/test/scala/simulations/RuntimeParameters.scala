@@ -15,7 +15,7 @@ class RuntimeParameters extends Simulation {
 
   def userCount: Int = getProperty("USERS", "5").toInt
   def rampDuration: Int = getProperty("RAMP_DURATION", "10").toInt
-  def testDuration: Int = getProperty("DURATION", "60").toInt
+  def testDuration: Int = getProperty("DURATION", "30").toInt
 
   before {
     println(s"Running test with ${userCount} users")

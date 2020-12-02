@@ -39,9 +39,9 @@ class FixedDurationLoadSimulation extends Simulation {
   setUp(
     scn.inject(
       nothingFor(5 seconds),
-      atOnceUsers(10),
-      rampUsers(50) during (30 second)
+      atOnceUsers(5),
+      rampUsers(15) during (10 second)
     ).protocols(httpConf.inferHtmlResources())
-  ).maxDuration(1 minute)
+  ).maxDuration(30 seconds)
 
 }
